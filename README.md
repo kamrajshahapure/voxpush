@@ -1,2 +1,27 @@
-# voxpush
-A simple tool to push your code to git through voice command
+## Voxpush
+This utility lets you run a specific command based on speech recognition which is completely local and is based on [Vosk](https://alphacephei.com/vosk/)
+
+**Note:** In this case this program commits and pushes code to your current branch of the most recently updated local repo and it is not very sophisticated atm as it was created in a matter of an hour or so
+
+## Setup
+
+Install required libraries
+`pip install -r requirements. txt`
+
+Set `ROOT_DIR` to desired path where all your git repos are placed, this is reqiured in order to detect changes as and when they are made
+
+The required model is already placed in the repo which is `vosk-model-small-en-in-0.4`
+You can use any model from [here](https://alphacephei.com/vosk/models) you will have to extract the zip and mention the path to model in the code
+
+Then set `MODEL_PATH` to the path where the extracted model is located
+
+Then run the script | **Important Note**: You will have to give mic permissions for this right after you run it
+`sudo python3 speechkey.py`
+
+## How to start with this tool
+
+After you run, you will have to press "`" key on the keyboard for speech to be detected and the tool listens to the speech until the key is pressed.
+
+Once the detection is completed, the script should do its job and should push your code to desired repo's current branch
+
+
