@@ -20,6 +20,75 @@ Then run the script | **Important Note**: You will have to give mic permissions 
 
 ## How to start with this tool
 
+```
++-------------------------------+
+|         Start Script          |
++-------------------------------+
+               |
+               | User initiates
+               v
++-------------------------------+
+|  Display Instructions:        |
+|  "Press and hold '`' to       |
+|   start speech recognition."  |
++-------------------------------+
+               |
+               | User action
+               v
++-------------------------------+
+|  User presses '`' key         |
++-------------------------------+
+               |
+               | Script action
+               v
++-------------------------------+
+|  Script listens for speech    |
++-------------------------------+
+               |
+               | User speaks
+               v
++-------------------------------+
+|  User says a Git command      |
+|  (e.g., "commit and push")    |
++-------------------------------+
+               |
+               | User releases key
+               v
++-------------------------------+
+|  Script processes audio       |
+|  and converts to text         |
++-------------------------------+
+               |
+               | Command recognized
+               v
++-------------------------------+
+|  Find most recently           |
+|  modified directory           |
++-------------------------------+
+               |
+               | Git operations
+               v
++-------------------------------+
+|  Execute Git command in       |
+|  the directory (commit, push) |
++-------------------------------+
+               |
+               | Wait or Exit
+               v
++-------------------------------+
+|  Script awaits further        |
+|  commands or script           |
+|  termination                  |
++-------------------------------+
+               |
+               | Repeat or Terminate
+               v
++-------------------------------+
+|  User may press '`' again or  |
+|  exit the script              |
++-------------------------------+
+```
+
 After you run, you will have to press "`" key on the keyboard for speech to be detected and the tool listens to the speech until the key is pressed.
 
 Once the detection is completed, the script should do its job and should push your code to desired repo's current branch
